@@ -1,6 +1,6 @@
 package org.example;
 
-public class Product {
+public class Product implements Comparable<Product>{
     private String name;
     private double price;
 
@@ -25,8 +25,12 @@ public class Product {
         this.name = name;
     }
 
-
     public String toString() {
-        return name + " - R$" + String.format(".%2f", price);
+        return name + " - R$" + String.format("%.2f", price);
+    }
+
+    @Override
+    public int compareTo(Product product) {
+        return this.name.toUpperCase().compareTo(product.getName().toUpperCase());
     }
 }

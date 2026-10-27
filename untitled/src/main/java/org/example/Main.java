@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -18,7 +19,7 @@ public class Main {
         products.add(p2);
         products.add(p3);
 
-        products.sort(new MyComparator());
+        Collections.sort(products);
 
         for (Product product : products){
             System.out.println(product);
